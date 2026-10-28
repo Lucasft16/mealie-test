@@ -37,7 +37,7 @@ INVALID_CASES = [
     pytest.param("1/", id="denominador ausente"),
     pytest.param("/2", id="numerador ausente"),
     pytest.param("²", id="caractere único que não é fração"),
-    # BVA: denominador = 0 (D3)
+    # Análise de valor limite: denominador = 0 (D3)
     pytest.param("1/0", id="bva: denominador 0"),
     pytest.param("0/0", id="bva: 0/0"),
     # D2 verdadeiro
