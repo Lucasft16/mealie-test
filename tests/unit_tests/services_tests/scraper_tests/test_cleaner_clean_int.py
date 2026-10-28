@@ -43,3 +43,40 @@ INVALID_CASES = [
 @pytest.mark.parametrize(("val", "min_val", "max_val"), INVALID_CASES)
 def test_invalid_inputs_return_none(val: str | int | None, min_val: int | None, max_val: int | None) -> None:
     assert clean_int(val, min=min_val, max=max_val) is None
+
+
+# Caixa-branca: MC/DC
+MCDC_D1_CASES = [
+    pytest.param(None, 1, 5, None, id="T1: A=V B=F"),
+    pytest.param(10, 1, 5, 10, id="T2: A=F B=V"),
+    pytest.param("3", 1, 5, 3, id="T3: A=F B=F"),
+]
+
+
+@pytest.mark.parametrize(("val", "min_val", "max_val", "expected"), MCDC_D1_CASES)
+def test_mcdc_d1(val: str | int | None, min_val: int | None, max_val: int | None, expected: int | None) -> None:
+    assert clean_int(val, min=min_val, max=max_val) == expected
+
+
+MCDC_D3_CASES = [
+    pytest.param("99", None, 5, 99, id="T1: A=V B=F"),
+    pytest.param("0", 1, None, 0, id="T2: A=F B=V"),
+    pytest.param("3", 1, 5, 3, id="T3: A=F B=F"),
+]
+
+
+@pytest.mark.parametrize(("val", "min_val", "max_val", "expected"), MCDC_D3_CASES)
+def test_mcdc_d3(val: str | int | None, min_val: int | None, max_val: int | None, expected: int | None) -> None:
+    assert clean_int(val, min=min_val, max=max_val) == expected
+
+
+MCDC_D4_CASES = [
+    pytest.param("0", 1, 5, None, id="T1: A=F B=V"),
+    pytest.param("6", 1, 5, None, id="T2: A=V B=F"),
+    pytest.param("3", 1, 5, 3, id="T3: A=V B=V"),
+]
+
+
+@pytest.mark.parametrize(("val", "min_val", "max_val", "expected"), MCDC_D4_CASES)
+def test_mcdc_d4(val: str | int | None, min_val: int | None, max_val: int | None, expected: int | None) -> None:
+    assert clean_int(val, min=min_val, max=max_val) == expected
