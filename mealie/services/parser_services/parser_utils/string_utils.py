@@ -65,17 +65,34 @@ def convert_vulgar_fractions_to_regular_fractions(text: str) -> str:
 
 
 def extract_quantity_from_string(source_str: str) -> tuple[float, str]:
-    """
-    Extracts a quantity from a string. The quantity can be a fraction, decimal, or integer.
-
-    Returns the quantity and the remaining string. If no quantity is found, returns the quantity as 0.
-    """
 
     source_str = source_str.strip()
     if not source_str:
         return 0, ""
 
+    
+    source_str = source_str.replace(',', '.')
+
+    
     source_str = convert_vulgar_fractions_to_regular_fractions(source_str)
+
+    
+    
+    range_patterns = [
+        re.compile(r"(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)"),
+        re.compile(r"(\d+(?:\.\d+)?)\s+to\s+(\d+(?:\.\d+)?)"),
+    ]
+    for pattern in range_patterns:
+        match = pattern.search(source_str)
+        if match:
+            try:
+                low = float(match.group(1))
+                high = float(match.group(2))
+                quantity = (low + high) / 2.0
+                remaining_str = source_str[: match.start()] + source_str[match.end() :]
+                return quantity, remaining_str.strip()
+            except ValueError:
+                continue
 
     mixed_fraction_pattern = re.compile(r"(\d+)\s+(\d+)/(\d+)")
     fraction_pattern = re.compile(r"(\d+)/(\d+)")
@@ -119,3 +136,4 @@ def extract_quantity_from_string(source_str: str) -> tuple[float, str]:
 
     # If no match, return 0 and the original string
     return 0, source_str
+
