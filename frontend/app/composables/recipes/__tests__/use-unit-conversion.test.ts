@@ -47,6 +47,20 @@ describe("convertIngredient", () => {
       expect(canConvertIngredient(input)).toBe(false);
       expect(convertIngredient(input, "metric")).toBe(input);
     });
+
+    // C06: infinite and NaN amounts would otherwise leak "Infinity"/"NaN" into the converted display
+    const nonFinite: [string, number][] = [
+      ["positive infinity", Infinity],
+      ["negative infinity", -Infinity],
+      ["NaN", NaN],
+    ];
+
+    test.each(nonFinite)("%s quantity is not convertible and is returned unchanged", (_label, quantity) => {
+      const input = ounces(quantity);
+
+      expect(canConvertIngredient(input)).toBe(false);
+      expect(convertIngredient(input, "metric")).toBe(input);
+    });
   });
 
   describe("choosing a rung", () => {
