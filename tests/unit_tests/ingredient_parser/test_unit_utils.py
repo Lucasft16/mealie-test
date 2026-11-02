@@ -307,3 +307,144 @@ def test_merge_quantity_and_unit_volume_ounce():
 
     assert quantity == 2
     assert unit.name == "mealie_cup"
+
+def _unit(name: str, qty, std_unit) -> CreateIngredientUnit:
+    return CreateIngredientUnit(name=name, standard_quantity=qty, standard_unit=std_unit)
+
+# Implementação dos Testes
+
+# ---------- MC/DC da decisão D1 (CT8 a CT11) ----------
+@pytest.mark.parametrize(
+    "q1, u1, q2, u2",
+    [
+        pytest.param(None, "cup", 1, "cup", id="CT8-A-false"),
+        pytest.param(1, None, 1, "cup", id="CT9-B-false"),
+        pytest.param(1, "cup", None, "cup", id="CT10-C-false"),
+        pytest.param(1, "cup", 1, None, id="CT11-D-false"),
+    ],
+)
+def test_merge_quantity_and_unit_mcdc_missing_standard_data(q1, u1, q2, u2):
+    unit_1 = _unit("mealie_a", q1, u1)
+    unit_2 = _unit("mealie_b", q2, u2)
+
+    with pytest.raises(ValueError):
+        merge_quantity_and_unit(1, unit_1, 1, unit_2)
+
+
+# ---------- Complementares (caixa-preta) ----------
+def test_merge_quantity_and_unit_zero_standard_quantity():  # CT12
+    unit_1 = _unit("mealie_zero", 0, "cup")
+    unit_2 = _unit("mealie_cup", 1, "cup")
+
+    with pytest.raises(ValueError):
+        merge_quantity_and_unit(1, unit_1, 1, unit_2)
+
+
+def test_merge_quantity_and_unit_invalid_first_unit():  # CT13
+    unit_1 = _unit("mealie_random", 1, random_string())
+    unit_2 = _unit("mealie_cup", 1, "cup")
+
+    with pytest.raises(UnitNotFound):
+        merge_quantity_and_unit(1, unit_1, 1, unit_2)
+
+
+def test_merge_quantity_and_unit_incompatible_units():  # CT14
+    unit_1 = _unit("mealie_pound", 1, "pound")
+    unit_2 = _unit("mealie_cup", 1, "cup")
+
+    with pytest.raises(pint.errors.DimensionalityError):
+        merge_quantity_and_unit(1, unit_1, 1, unit_2)
+
+
+def test_merge_quantity_and_unit_result_exactly_one():  # CT15
+    pint_u = _unit("mealie_pint", 1, "pint")
+    cup_u = _unit("mealie_cup", 1, "cup")
+
+    quantity, unit = merge_quantity_and_unit(0.5, pint_u, 1, cup_u)
+
+    # 0.5 pint + 1 cup = 1 pint -> abs(1) < 1 é falso, permanece em pint
+    assert quantity == pytest.approx(1)
+    assert unit.name == "mealie_pint"
+
+
+def test_merge_quantity_and_unit_result_just_below_one():  # CT16
+    pint_u = _unit("mealie_pint", 1, "pint")
+    cup_u = _unit("mealie_cup", 1, "cup")
+
+    quantity, unit = merge_quantity_and_unit(0.49, pint_u, 1, cup_u)
+
+    # 0.49 pint + 1 cup = 0.99 pint (<1) -> 1.98 cup
+    assert quantity == pytest.approx(1.98)
+    assert unit.name == "mealie_cup"
+
+
+def test_merge_quantity_and_unit_negative_result():  # CT17
+    pint_u = _unit("mealie_pint", 1, "pint")
+    cup_u = _unit("mealie_cup", 1, "cup")
+
+    quantity, unit = merge_quantity_and_unit(-1, pint_u, 1, cup_u)
+
+    # -1 pint + 1 cup = -1 cup; abs(-0.5 pint) < 1 -> menor unidade
+    assert quantity == pytest.approx(-1)
+    assert unit.name == "mealie_cup"
+
+
+def test_merge_quantity_and_unit_zero_result():  # CT18
+    pint_u = _unit("mealie_pint", 1, "pint")
+    cup_u = _unit("mealie_cup", 1, "cup")
+
+    quantity, unit = merge_quantity_and_unit(1, pint_u, -2, cup_u)
+
+    assert quantity == pytest.approx(0)
+    assert unit.name == "mealie_cup"
+
+
+def test_merge_quantity_and_unit_equal_size_units_returns_first():  # CT19
+    unit_1 = _unit("mealie_cup", 1, "cup")
+    unit_2 = _unit("mealie_cup_alt", 1, "cup")
+
+    quantity, unit = merge_quantity_and_unit(1, unit_1, 2, unit_2)
+
+    assert quantity == pytest.approx(3)
+    assert unit.name == "mealie_cup"  # empate -> unit_1
+
+
+def test_merge_quantity_and_unit_non_unit_multiplier():  # CT20
+    tbsp = _unit("mealie_tbsp", 15, "milliliter")
+    cup = _unit("mealie_cup", 240, "milliliter")
+
+    quantity, unit = merge_quantity_and_unit(2, tbsp, 1, cup)
+
+    # 30 ml + 240 ml = 270 ml = 1.125 cup
+    assert quantity == pytest.approx(1.125)
+    assert unit.name == "mealie_cup"
+
+
+def test_merge_quantity_and_unit_volume_ounce_second_position():  # CT21
+    cup = _unit("mealie_cup", 1, "cup")
+    oz = _unit("mealie_oz", 1, "ounce")
+
+    quantity, unit = merge_quantity_and_unit(1, cup, 8, oz)
+
+    # 1 cup + 8 fl oz = 2 cup
+    assert quantity == pytest.approx(2)
+    assert unit.name == "mealie_cup"
+
+
+def test_merge_quantity_and_unit_weight_ounce_not_converted():  # CT22
+    lb = _unit("mealie_lb", 1, "pound")
+    oz = _unit("mealie_oz", 1, "ounce")
+
+    quantity, unit = merge_quantity_and_unit(1, lb, 8, oz)
+
+    assert quantity == pytest.approx(1.5)
+    assert unit.name == "mealie_lb"
+
+
+def test_merge_quantity_and_unit_does_not_leak_definitions():  # CT23
+    cup = _unit("mealie_cup", 1, "cup")
+    pint_u = _unit("mealie_pint", 1, "pint")
+
+    merge_quantity_and_unit(1, cup, 1, pint_u)
+
+    assert not UnitConverter().can_convert("_mealie_unit_1", "cup")
