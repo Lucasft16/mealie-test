@@ -39,6 +39,16 @@ describe("convertIngredient", () => {
     });
   });
 
+  describe("ingredients with an invalid quantity", () => {
+    // C05: a negative amount is not a measurement, so it must not be restated in another unit
+    test("negative quantity is not convertible and is returned unchanged", () => {
+      const input = ounces(-4);
+
+      expect(canConvertIngredient(input)).toBe(false);
+      expect(convertIngredient(input, "metric")).toBe(input);
+    });
+  });
+
   describe("choosing a rung", () => {
     test("stays on the smaller unit below the takeover point", () => {
       // 30oz is 850g, short of the kilogram rung
