@@ -34,7 +34,7 @@ const FINEST_DENOMINATOR = Math.max(...FRACTION_DENOMINATORS);
  */
 function resolveConvertible(ingredient: RecipeIngredient): ConvertibleIngredient | null {
   const { quantity, unit } = ingredient;
-  if (!quantity || !unit?.standardUnit || !unit.standardQuantity) {
+  if (!quantity || quantity < 0 || !unit?.standardUnit || !unit.standardQuantity) {
     return null;
   }
 
