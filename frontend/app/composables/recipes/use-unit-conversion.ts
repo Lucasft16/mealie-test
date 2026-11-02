@@ -24,6 +24,10 @@ const DECIMAL_STEPS = [1, 2, 5];
 const FRACTION_DENOMINATORS = [1, 2, 3, 4, 8];
 const FINEST_DENOMINATOR = Math.max(...FRACTION_DENOMINATORS);
 
+function isValidQuantity(quantity: number | null | undefined): quantity is number {
+  return typeof quantity === "number" && Number.isFinite(quantity) && quantity > 0;
+}
+
 /**
  * Resolve the values needed to convert an ingredient, or null if it can't be converted.
  *
@@ -34,7 +38,9 @@ const FINEST_DENOMINATOR = Math.max(...FRACTION_DENOMINATORS);
  */
 function resolveConvertible(ingredient: RecipeIngredient): ConvertibleIngredient | null {
   const { quantity, unit } = ingredient;
-  if (!quantity || quantity < 0 || quantity === Infinity || !unit?.standardUnit || !unit.standardQuantity) {
+  // A usable amount is finite and positive. Zero, negatives, NaN and Infinity have no meaningful
+  // restatement in another unit, so they are left as authored.
+  if (!isValidQuantity(quantity) || !unit?.standardUnit || !unit.standardQuantity) {
     return null;
   }
 
