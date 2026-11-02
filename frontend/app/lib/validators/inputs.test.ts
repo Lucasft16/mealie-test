@@ -34,6 +34,14 @@ test("validator required", () => {
   expect(required(null)).toBe(falsey);
 });
 
+// C07: campo obrigatorio preenchido so com espacos deve ser rejeitado
+test("validator required rejects whitespace-only text", () => {
+  const falsey = enUS.validators.required;
+  expect(required(" ")).toBe(falsey); // um espaco
+  expect(required("   ")).toBe(falsey); // varios espacos
+  expect(required("  abc  ")).toBe(true); // texto com espacos em volta continua valido
+});
+
 const nulls = [undefined, null];
 
 test("validator email", () => {
