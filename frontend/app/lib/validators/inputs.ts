@@ -5,7 +5,7 @@ const EMAIL_REGEX
 
 export function required(v: string | undefined | null) {
   const i18n = useGlobalI18n();
-  return (!!v && v.trim().length > 0) || i18n.t("validators.required");
+  return !!v?.trim() || i18n.t("validators.required");
 }
 
 export function email(v: string | undefined | null) {
