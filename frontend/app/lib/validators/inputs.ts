@@ -15,7 +15,7 @@ export function email(v: string | undefined | null) {
 
 export function whitespace(v: string | null | undefined) {
   const i18n = useGlobalI18n();
-  return (!!v && v.split(" ").length <= 1) || i18n.t("validators.no-whitespace");
+  return (!!v && !/\s/.test(v)) || i18n.t("validators.no-whitespace");
 }
 
 export function url(v: string | undefined | null) {
