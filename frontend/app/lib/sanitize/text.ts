@@ -5,6 +5,6 @@
  * returned verbatim rather than interpreted.
  */
 export function truncateText(text: string, length = 20, clamp = "..."): string {
-  const chars = Array.from(text);
+  const chars = [...text];
   return chars.length > length ? chars.slice(0, length).join("") + clamp : text;
 }
