@@ -75,10 +75,7 @@ def test_branch_coverage(source_str, expected_qty, expected_rem):
     ]
 )
 def test_mcdc_coverage(source_str, expected_qty, expected_rem):
-    """
-    Condições do try-block modeladas como A (mista), B (fração) e C (número).
-    Garante que cada condição individualmente altera o fluxo de decisão.
-    """
+    """Condições do try-block modeladas como A (mista), B (fração) e C (número). Garante que cada condição individualmente altera o fluxo de decisão."""
     quantity, remaining = extract_quantity_from_string(source_str)
     assert quantity == pytest.approx(expected_qty)
     assert remaining == expected_rem
@@ -98,3 +95,18 @@ def test_quantity_ranges(source_str, expected_qty, expected_rem):
     assert quantity == pytest.approx(expected_qty)
     assert remaining == expected_rem
 
+
+
+@pytest.mark.parametrize(
+    "source_str, expected_qty, expected_rem",
+    [
+        pytest.param("1,5 cups", 1.5, "cups", id="CD1: Decimal vírgula"),
+        pytest.param("0,25 liters", 0.25, "liters", id="CD2: Decimais pequenos"),
+        pytest.param("2,75 grams", 2.75, "grams", id="CD3: Decimais mistos"),
+    ]
+)
+def test_comma_decimal_separators(source_str, expected_qty, expected_rem):
+    """Testa a extração de quantidades onde a vírgula é usada como separador decimal."""
+    quantity, remaining = extract_quantity_from_string(source_str)
+    assert quantity == pytest.approx(expected_qty)
+    assert remaining == expected_rem
