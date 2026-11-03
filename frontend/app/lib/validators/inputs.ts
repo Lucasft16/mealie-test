@@ -3,9 +3,12 @@ import { useGlobalI18n } from "~/composables/use-global-i18n";
 const EMAIL_REGEX
   = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+// any whitespace character: space, tab, line break, carriage return...
+const WHITESPACE_REGEX = /\s/;
+
 export function required(v: string | undefined | null) {
   const i18n = useGlobalI18n();
-  return !!v || i18n.t("validators.required");
+  return !!v?.trim() || i18n.t("validators.required");
 }
 
 export function email(v: string | undefined | null) {
@@ -15,7 +18,7 @@ export function email(v: string | undefined | null) {
 
 export function whitespace(v: string | null | undefined) {
   const i18n = useGlobalI18n();
-  return (!!v && v.split(" ").length <= 1) || i18n.t("validators.no-whitespace");
+  return (!!v && !WHITESPACE_REGEX.test(v)) || i18n.t("validators.no-whitespace");
 }
 
 export function url(v: string | undefined | null) {

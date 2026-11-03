@@ -34,6 +34,14 @@ test("validator required", () => {
   expect(required(null)).toBe(falsey);
 });
 
+// C07: campo obrigatorio preenchido so com espacos deve ser rejeitado
+test("validator required rejects whitespace-only text", () => {
+  const falsey = enUS.validators.required;
+  expect(required(" ")).toBe(falsey); // um espaco
+  expect(required("   ")).toBe(falsey); // varios espacos
+  expect(required("  abc  ")).toBe(true); // texto com espacos em volta continua valido
+});
+
 const nulls = [undefined, null];
 
 test("validator email", () => {
@@ -55,6 +63,15 @@ test("whitespace", () => {
   for (const n of nulls) {
     expect(whitespace(n)).toBe(falsey);
   }
+});
+
+// C08: whitespace tambem deve rejeitar tab e quebra de linha, nao so o espaco comum
+test("whitespace rejects tabs and line breaks", () => {
+  const falsey = enUS.validators["no-whitespace"];
+  expect(whitespace("123\t123")).toBe(falsey); // tab
+  expect(whitespace("123\n123")).toBe(falsey); // quebra de linha
+  expect(whitespace("123\r\n123")).toBe(falsey); // quebra de linha do Windows
+  expect(whitespace("\t")).toBe(falsey); // so um tab
 });
 
 test("url", () => {
