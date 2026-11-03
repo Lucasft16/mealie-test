@@ -32,4 +32,19 @@ describe("truncateText", () => {
     expect(createElement).not.toHaveBeenCalled();
     createElement.mockRestore();
   });
+
+  // C09: nao cortar emojis simples ao meio
+  test("does not split simple emojis in half when truncating", () => {
+    expect(truncateText("Bolo 🍰", 6)).toEqual("Bolo 🍰");
+    expect(truncateText("Bolo 🍰!", 6)).toEqual("Bolo 🍰...");
+    expect(truncateText("🍕🍔🍟", 2)).toEqual("🍕🍔...");
+  });
+
+  // C10: tratar letra com acento combinante como um unico carater visual
+  test("treats letter with combining accent as a single visual character", () => {
+    const cafeDecomposed = "cafe\u0301"; // "café" com acento combinante (4 caracteres visuais, 5 code points)
+    expect(truncateText(cafeDecomposed, 4)).toEqual("cafe\u0301");
+    expect(truncateText(`${cafeDecomposed} gelado`, 4)).toEqual("cafe\u0301...");
+    expect(truncateText("maça\u0303 verde", 4)).toEqual("maça\u0303...");
+  });
 });
