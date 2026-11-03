@@ -40,6 +40,43 @@ describe("useMealPlanScale", () => {
     expect(scale.value).toBe(1);
   });
 
+  test.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY])(
+    "C12: starts at scale 1 when the entry contains %s",
+    (invalidScale) => {
+      const { scale } = useMealPlanScale(createMeal({ recipeScale: invalidScale }), save);
+
+      expect(scale.value).toBe(1);
+      vi.runAllTimers();
+      expect(save).not.toHaveBeenCalled();
+    },
+  );
+
+  test.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY])(
+    "C12: normalizes refreshed scale %s without saving it back",
+    (invalidScale) => {
+      const meal = ref(createMeal({ recipeScale: 2 }));
+      const { scale } = useMealPlanScale(meal, save);
+
+      meal.value = createMeal({ recipeScale: invalidScale });
+
+      expect(scale.value).toBe(1);
+      vi.runAllTimers();
+      expect(save).not.toHaveBeenCalled();
+    },
+  );
+
+  test("C12: preserves a valid pending edit when refreshed with an invalid scale", () => {
+    const meal = ref(createMeal({ recipeScale: 3 }));
+    const { scale } = useMealPlanScale(meal, save);
+
+    scale.value = 0.5;
+    meal.value = createMeal({ recipeScale: Number.NaN });
+
+    expect(scale.value).toBe(0.5);
+    vi.advanceTimersByTime(MEALPLAN_SCALE_SAVE_DELAY_MS);
+    expect(save).toHaveBeenCalledExactlyOnceWith({ ...meal.value, recipeScale: 0.5 });
+  });
+
   test.each([
     [{ recipeServings: 4, recipeYieldQuantity: 12 }, 4],
     [{ recipeServings: 0, recipeYieldQuantity: 12 }, 12],
@@ -60,6 +97,44 @@ describe("useMealPlanScale", () => {
 
     vi.advanceTimersByTime(1);
     expect(save).toHaveBeenCalledExactlyOnceWith({ ...meal, recipeScale: 2 });
+  });
+
+  test.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY])(
+    "C11: does not save invalid scale %s after the delay",
+    (invalidScale) => {
+      const { scale } = useMealPlanScale(createMeal(), save);
+
+      scale.value = invalidScale;
+      vi.advanceTimersByTime(MEALPLAN_SCALE_SAVE_DELAY_MS);
+
+      expect(save).not.toHaveBeenCalled();
+    },
+  );
+
+  test.each(["flush", "dispose"])("C11: does not save an invalid edit on %s", (action) => {
+    const scope = effectScope();
+    const { scale, flush } = scope.run(() => useMealPlanScale(createMeal(), save))!;
+
+    scale.value = 2;
+    scale.value = 0;
+    if (action === "flush") flush();
+    scope.stop();
+    vi.runAllTimers();
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test("C11: saves a valid fractional scale after an invalid edit", () => {
+    const meal = createMeal();
+    const { scale } = useMealPlanScale(meal, save);
+
+    scale.value = -1;
+    vi.advanceTimersByTime(MEALPLAN_SCALE_SAVE_DELAY_MS);
+    expect(save).not.toHaveBeenCalled();
+
+    scale.value = 0.5;
+    vi.advanceTimersByTime(MEALPLAN_SCALE_SAVE_DELAY_MS);
+    expect(save).toHaveBeenCalledExactlyOnceWith({ ...meal, recipeScale: 0.5 });
   });
 
   test("saves only the last of several quick changes", () => {
