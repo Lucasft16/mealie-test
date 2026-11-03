@@ -16,4 +16,11 @@ describe("normalizeMissingItemLimit", () => {
     expect(normalizeMissingItemLimit(null)).toBe(0);
     expect(normalizeMissingItemLimit(undefined)).toBe(0);
   });
+  it.each([NaN, Infinity])("normalizes %s to zero", (value) => {
+    expect(normalizeMissingItemLimit(value)).toBe(0);
+  });
+
+  it("keeps -Infinity at zero (regression)", () => {
+    expect(normalizeMissingItemLimit(-Infinity)).toBe(0);
+  });
 });
