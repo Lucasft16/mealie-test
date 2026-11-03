@@ -1,3 +1,7 @@
 export function normalizeMissingItemLimit(value: number | null | undefined): number {
-  return Math.max(0, value ?? 0);
+  const limit = value ?? 0;
+  if (!Number.isFinite(limit)) {
+    return 0;
+  }
+  return Math.max(0, Math.floor(limit));
 }

@@ -16,4 +16,22 @@ describe("normalizeMissingItemLimit", () => {
     expect(normalizeMissingItemLimit(null)).toBe(0);
     expect(normalizeMissingItemLimit(undefined)).toBe(0);
   });
+  it.each([NaN, Infinity])("normalizes %s to zero", (value) => {
+    expect(normalizeMissingItemLimit(value)).toBe(0);
+  });
+
+  it("keeps -Infinity at zero (regression)", () => {
+    expect(normalizeMissingItemLimit(-Infinity)).toBe(0);
+  });
+  it.each([
+    [2.7, 2],
+    [0.9, 0],
+    [19.999, 19],
+  ])("truncates fractional limit %s to %s", (value, expected) => {
+    expect(normalizeMissingItemLimit(value)).toBe(expected);
+  });
+
+  it("keeps integer limits unchanged (regression)", () => {
+    expect(normalizeMissingItemLimit(2)).toBe(2);
+  });
 });

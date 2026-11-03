@@ -1,0 +1,65 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.js:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/lauraester/mealie/frontend[39m
+
+[90mstderr[2m | app/lib/recipe/recipe-finder.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [31m❯[39m app/lib/recipe/recipe-finder.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 4[2mms[22m[39m
+     [32m✓[39m preserves non-negative limits[32m 1[2mms[22m[39m
+     [32m✓[39m clamps negative limits to zero[32m 0[2mms[22m[39m
+     [32m✓[39m normalizes an empty input to zero[32m 0[2mms[22m[39m
+[31m     [31m×[31m normalizes NaN to zero[39m[32m 2[2mms[22m[39m
+[31m     [31m×[31m normalizes Infinity to zero[39m[32m 0[2mms[22m[39m
+     [32m✓[39m keeps -Infinity at zero (regression)[32m 0[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 2 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m app/lib/recipe/recipe-finder.test.ts[2m > [22mnormalizeMissingItemLimit[2m > [22mnormalizes NaN to zero
+[31m[1mAssertionError[22m: expected NaN to be +0 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 0[39m
+[31m+ NaN[39m
+
+[36m [2m❯[22m app/lib/recipe/recipe-finder.test.ts:[2m20:46[22m[39m
+    [90m 18|[39m   })[33m;[39m
+    [90m 19|[39m   it[33m.[39m[34meach[39m([[33mNaN[39m[33m,[39m [33mInfinity[39m])([32m"normalizes %s to zero"[39m[33m,[39m (value) [33m=>[39m {
+    [90m 20|[39m     [34mexpect[39m([34mnormalizeMissingItemLimit[39m(value))[33m.[39m[34mtoBe[39m([34m0[39m)[33m;[39m
+    [90m   |[39m                                              [31m^[39m
+    [90m 21|[39m   })[33m;[39m
+    [90m 22|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m app/lib/recipe/recipe-finder.test.ts[2m > [22mnormalizeMissingItemLimit[2m > [22mnormalizes Infinity to zero
+[31m[1mAssertionError[22m: expected Infinity to be +0 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 0[39m
+[31m+ Infinity[39m
+
+[36m [2m❯[22m app/lib/recipe/recipe-finder.test.ts:[2m20:46[22m[39m
+    [90m 18|[39m   })[33m;[39m
+    [90m 19|[39m   it[33m.[39m[34meach[39m([[33mNaN[39m[33m,[39m [33mInfinity[39m])([32m"normalizes %s to zero"[39m[33m,[39m (value) [33m=>[39m {
+    [90m 20|[39m     [34mexpect[39m([34mnormalizeMissingItemLimit[39m(value))[33m.[39m[34mtoBe[39m([34m0[39m)[33m;[39m
+    [90m   |[39m                                              [31m^[39m
+    [90m 21|[39m   })[33m;[39m
+    [90m 22|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (6)[39m
+[2m   Start at [22m 23:00:11
+[2m   Duration [22m 553ms[2m (transform 20ms, setup 51ms, import 8ms, tests 4ms, environment 402ms)[22m
+
+exit=1

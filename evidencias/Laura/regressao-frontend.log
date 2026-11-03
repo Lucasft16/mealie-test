@@ -1,0 +1,785 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.js:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/Users/lauraester/mealie/frontend[39m
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/use-shopping-list-search.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/plugins/__tests__/axios.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-auth-backend.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-crud.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/shopping-list-page/__tests__/use-shopping-list-page.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-unit-conversion.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIPromptEditor.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-recipe-ingredients.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-auth-backend.test.ts[2m > [22m[2msignOut[2m > [22m[2mclears the session even when the logout call fails
+[22m[39mLogout API call failed: Error: Unauthorized
+    at unauthorized [90m(/Users/lauraester/mealie/frontend/[39mapp/composables/__tests__/use-auth-backend.test.ts:24:24[90m)[39m
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/__tests__/use-auth-backend.test.ts:194:38
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m {
+  response: { status: [33m401[39m }
+}
+
+ [32m✓[39m app/composables/__tests__/use-auth-backend.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/use-shopping-list-search.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-crud.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m app/plugins/__tests__/axios.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 147[2mms[22m[39m
+ [32m✓[39m app/composables/recipes/__tests__/use-unit-conversion.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m app/composables/shopping-list-page/__tests__/use-shopping-list-page.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m app/composables/recipes/__tests__/use-recipe-ingredients.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m app/components/Domain/Group/GroupAIPromptEditor.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 184[2mms[22m[39m
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-sorting.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-token-cookie.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-query-filter-builder.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/components/global/DropZone.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-ingredient-substitutions.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mnextIngredient[2m > [22m[2msteps through the ingredients
+[22m[39mChecking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {} }[36m)[39m
+Needs review due to low confidence: [90mundefined[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{
+  ingredient: { food: { id: [32m''[39m, name: [32m'fuwud'[39m } },
+  confidence: { average: [33m0.99[39m }
+}[36m)[39m
+Needs review due to missing food ID: [36mProxy([39m{ id: [32m''[39m, name: [32m'fuwud'[39m }[36m)[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{
+  ingredient: { unit: { id: [32m''[39m, name: [32m'uwunit'[39m } },
+  confidence: { average: [33m0.99[39m }
+}[36m)[39m
+Needs review due to missing unit ID: [36mProxy([39m{ id: [32m''[39m, name: [32m'uwunit'[39m }[36m)[39m
+showing info
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mnextIngredient[2m > [22m[2mskips over ingredients that don't need to be reviewed
+[22m[39mChecking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.99[39m } }[36m)[39m
+No review needed
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: { referencedRecipe: {} }, confidence: { average: [33m0.5[39m } }[36m)[39m
+No review needed for sub-recipe ingredient
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.99[39m } }[36m)[39m
+No review needed
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: { referencedRecipe: {} }, confidence: { average: [33m0.5[39m } }[36m)[39m
+No review needed for sub-recipe ingredient
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+showing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mnextIngredient[2m > [22m[2mskips over deleted ingredients properly
+[22m[39mChecking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+showing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mnextIngredient[2m > [22m[2mpulls from cache when it can
+[22m[39mChecking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {}, confidence: { average: [33m0.5[39m } }[36m)[39m
+Needs review due to low confidence: [33m0.5[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: {} }[36m)[39m
+Needs review due to low confidence: [90mundefined[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{
+  ingredient: { food: { id: [32m''[39m, name: [32m'fuwud'[39m } },
+  confidence: { average: [33m0.99[39m }
+}[36m)[39m
+Needs review due to missing food ID: [36mProxy([39m{ id: [32m''[39m, name: [32m'fuwud'[39m }[36m)[39m
+Checking if ingredient needs review (input="undefined)": [36mProxy([39m{
+  ingredient: { unit: { id: [32m''[39m, name: [32m'uwunit'[39m } },
+  confidence: { average: [33m0.99[39m }
+}[36m)[39m
+Needs review due to missing unit ID: [36mProxy([39m{ id: [32m''[39m, name: [32m'uwunit'[39m }[36m)[39m
+showing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mnextStep[2m > [22m[2mwalks through the workflow
+[22m[39mshowing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mnextStep[2m > [22m[2mskips the parse page if nothing to confirm
+[22m[39mshowing info
+
+ [32m✓[39m app/composables/__tests__/use-token-cookie.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2mparses ingredients
+[22m[39mChecking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: { title: [32m''[39m } }[36m)[39m
+Needs review due to low confidence: [90mundefined[39m
+showing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2monly makes one call at a time
+[22m[39mChecking if ingredient needs review (input="undefined)": [36mProxy([39m{ ingredient: { title: [32m''[39m } }[36m)[39m
+Needs review due to low confidence: [90mundefined[39m
+showing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2mdoesn't parse from an empty list
+[22m[39mshowing info
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2mhandles errors gracefully
+[22m[39mshowing info
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2mhandles errors gracefully
+[22m[39mError parsing ingredients: 💥 Woe, exception be upon ye 💥
+
+[90mstdout[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2mhandles errors gracefully
+[22m[39mshowing info
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts[2m > [22m[2museParseIngredientsDialog[2m > [22m[2mparseIngredients[2m > [22m[2mhandles errors gracefully
+[22m[39mError parsing ingredients: Error: Failed to parse ingredients
+    at parseIngredients [90m(/Users/lauraester/mealie/frontend/[39mapp/composables/recipes/use-parse-ingredients-dialog.ts:234:15[90m)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts:455:7
+
+ [32m✓[39m app/composables/recipes/__tests__/use-parse-ingredients-dialog.test.ts [2m([22m[2m41 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts
+[22m[39mInvalid queue object in local storage; resetting queue.
+
+(node:74400) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-sorting.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts[2m > [22m[2museShoppingListItemActions[2m > [22m[2mprocess processes the queue[2m > [22m[2mclears the queue if there was an error merging
+[22m[39mError processing queue items of type delete: 💥 Woe, exception be upon ye 💥
+
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts[2m > [22m[2museShoppingListItemActions[2m > [22m[2mprocess processes the queue[2m > [22m[2mclears the queue if there was an error merging
+[22m[39mError processing queue items of type update: 💥 Woe, exception be upon ye 💥
+
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts[2m > [22m[2museShoppingListItemActions[2m > [22m[2mprocess processes the queue[2m > [22m[2mclears the queue if there was an error merging
+[22m[39mError processing queue items of type create: 💥 Woe, exception be upon ye 💥
+
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts[2m > [22m[2museShoppingListItemActions[2m > [22m[2mgetQueue[2m > [22m[2mfetches from local storage if available
+[22m[39mInvalid queue object in local storage; resetting queue.
+
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-item-actions.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m app/composables/__tests__/use-query-filter-builder.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m app/composables/recipes/__tests__/use-ingredient-substitutions.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts
+[22m[39mInvalid queue object in local storage; resetting queue.
+
+(node:74399) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mrefreshes[2m > [22m[2mdoes not overwrite the list when there's an error
+[22m[39mError: 💥Woe, exception be upon ye💥
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:90:28
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2956:64
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mrefreshes[2m > [22m[2mlogs an error if processing fails
+[22m[39mError: 💥Woe, exception be upon ye💥
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:97:28
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2956:64
+
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mrefreshes[2m > [22m[2monly update the list with the new value if we're not loading, to prevent UI jitter
+[22m[39mError processing queue items of type create: TypeError: Cannot read properties of undefined (reading 'then')
+    at processQueueItems [90m(/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/use-shopping-list-item-actions.ts:215:35[90m)[39m
+    at Object.process [90m(/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/use-shopping-list-item-actions.ts:248:17[90m)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at refresh [90m(/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/use-shopping-list-data.ts:26:7[90m)[39m
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:106:7
+    at async [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:20
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/components/global/DropZone.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mpolling[2m > [22m[2mgives up after max attempts 1
+[22m[39mError: 💥Woe, exception be upon ye💥
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:136:24
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2956:64
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mpolling[2m > [22m[2mgives up after max attempts 1
+[22m[39mError: 💥Woe, exception be upon ye💥
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:136:24
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2956:64
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma stale fetch for a previously-selected provider does not clobber the form after switching providers
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma stale fetch for a previously-selected provider does not clobber the form after switching providers
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-b" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-b" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma stale fetch for a previously-selected provider does not clobber the form after switching providers
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-b" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-b" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma successful test with no image check does not call the provider text-only
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma successful test with no image check does not call the provider text-only
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mpolling[2m > [22m[2mgives up after max attempts 2
+[22m[39mError: 💥Woe, exception be upon ye💥
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:143:24
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2956:64
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mpolling[2m > [22m[2mgives up after max attempts 2
+[22m[39mError: 💥Woe, exception be upon ye💥
+    at [90m/Users/lauraester/mealie/frontend/[39mapp/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts:143:24
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:302:11
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:1903:26
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2326:20
+    at new Promise (<anonymous>)
+    at runWithCancel [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2323:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2305:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2272:10[90m)[39m
+    at [90mfile:///Users/lauraester/mealie/frontend/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@4.1.12/node_modules/[4m@vitest/runner[24m/dist/chunk-artifact.js:2956:64
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma successful test with supportsImages true still shows the image note
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma successful test with supportsImages true still shows the image note
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma successful test with supportsImages false still shows the image note
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+[90mstderr[2m | app/components/Domain/Group/GroupAIProviderDialog.test.ts[2m > [22m[2mgroupAIProviderDialog[2m > [22m[2ma successful test with supportsImages false still shows the image note
+[22m[39m[Vue warn]: Failed to resolve component: v-card-text
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+[Vue warn]: Failed to resolve directive: no-autofill 
+  at <GroupAIProviderDialog modelValue=true providerId="provider-a" ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+ [32m✓[39m app/components/Domain/Group/GroupAIProviderDialog.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 98[2mms[22m[39m
+[90mstdout[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts[2m > [22m[2muse-shopping-list-data[2m > [22m[2mpolling[2m > [22m[2mstopPolling doesn't explode if there isn't a timer running
+[22m[39mInvalid queue object in local storage; resetting queue.
+
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-data.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 275[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Recipe/RecipeDialogSearch.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/recipes/__tests__/use-recipe-permissions.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/shopping-list-page/__tests__/use-shopping-list-item-editor.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/shopping-list-page/__tests__/use-add-to-shopping-list-dialog.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-mealplan-scale.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/recipes/__tests__/use-recipe-permissions.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | app/composables/recipe-page/__tests__/use-extract-ingredient-references.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/use-search.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/shopping-list-page/__tests__/use-add-to-shopping-list-dialog.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m app/composables/__tests__/use-mealplan-scale.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m app/composables/use-search.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m app/composables/shopping-list-page/__tests__/use-shopping-list-item-editor.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-copy.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-mealplan-rules.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/__tests__/use-mealplan-rules.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 60[2mms[22m[39m
+ [32m✓[39m app/composables/recipe-page/__tests__/use-extract-ingredient-references.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-copy.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+[90mstderr[2m | app/composables/recipe-page/use-cook-mode-query.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/pages/register/index.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts[2m > [22m[2mpermission middlewares return their redirect[2m > [22m[2mcan-organize-only[2m > [22m[2mRETURNS the redirect for a user without permission
+[22m[39mUser is not allowed to organize data
+
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts[2m > [22m[2mpermission middlewares return their redirect[2m > [22m[2mcan-organize-only[2m > [22m[2mRETURNS the redirect when user is null
+[22m[39mUser is not allowed to organize data
+
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts[2m > [22m[2mpermission middlewares return their redirect[2m > [22m[2mcan-manage-only[2m > [22m[2mRETURNS the redirect for a user without permission
+[22m[39mUser is not allowed to manage group settings
+
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts[2m > [22m[2mpermission middlewares return their redirect[2m > [22m[2mcan-manage-only[2m > [22m[2mRETURNS the redirect when user is null
+[22m[39mUser is not allowed to manage group settings
+
+ [32m✓[39m app/composables/recipe-page/use-cook-mode-query.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts[2m > [22m[2mpermission middlewares return their redirect[2m > [22m[2madvanced-only[2m > [22m[2mRETURNS the redirect for a user without permission
+[22m[39mUser is not allowed to access advanced features
+
+[90mstderr[2m | app/middleware/__tests__/can-manage-only.test.ts[2m > [22m[2mpermission middlewares return their redirect[2m > [22m[2madvanced-only[2m > [22m[2mRETURNS the redirect when user is null
+[22m[39mUser is not allowed to access advanced features
+
+ [32m✓[39m app/middleware/__tests__/can-manage-only.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 103[2mms[22m[39m
+(node:74412) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m app/pages/register/index.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 103[2mms[22m[39m
+[90mstderr[2m | app/composables/recipes/__tests__/use-scaled-amount.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/lib/recipe/recipe-visibility.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/recipes/__tests__/use-scaled-amount.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m app/lib/recipe/recipe-visibility.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Recipe/RecipeDataAliasManagerDialog.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/partials/__tests__/use-actions-factory.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/partials/__tests__/use-actions-factory.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/QueryFilterSummary.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/components/Domain/Recipe/RecipeDataAliasManagerDialog.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Mealplan/MealPlanScaleControl.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/lib/sanitize/markdown.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/sanitize/markdown.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+[90mstderr[2m | app/pages/group/reports/report.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipeIngredients.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/components/Domain/Mealplan/MealPlanScaleControl.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m app/components/Domain/QueryFilterSummary.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 99[2mms[22m[39m
+ [32m✓[39m app/components/Domain/Recipe/RecipeDialogSearch.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m app/components/Domain/Recipe/RecipeIngredients.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 84[2mms[22m[39m
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-state.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-recipes.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-state.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-recipes.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+[90mstderr[2m | app/lib/validators/inputs.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/validators/inputs.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstderr[2m | app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-labels.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+[90mstderr[2m | app/composables/__tests__/use-group-mealplan.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/shopping-list-page/sub-composables/__tests__/use-shopping-list-labels.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | app/composables/recipes/__tests__/use-recipe-time.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/recipes/__tests__/use-recipe-time.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+[90mstderr[2m | app/composables/recipes/__tests__/use-unit-system.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+(node:74436) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [31m❯[39m app/composables/recipes/__tests__/use-unit-system.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m6 failed[39m[2m)[22m[32m 7[2mms[22m[39m
+[31m     [31m×[31m shows recipes as written until the reader opts in[39m[32m 5[2mms[22m[39m
+[31m     [31m×[31m nothing is inferred from the locale[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m metric can be chosen[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m us can be chosen[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m the choice survives a reload[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m showAsWritten goes back to the authored units[39m[32m 0[2mms[22m[39m
+[90mstderr[2m | app/lib/sanitize/text.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/sanitize/text.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+[90mstderr[2m | app/middleware/__tests__/auth.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/middleware/__tests__/auth.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Announcement/Announcements/announcements.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/components/Domain/Announcement/Announcements/announcements.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2malways shows a blank optional input without emitting a duration
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mconverts minutes to seconds, edits, and clears
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mblocks typing a minus sign
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mclears the duration for 0 minutes but keeps showing 0
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/lib/recipe/recipe-finder.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/recipe/recipe-finder.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mpreserves exact imported 1 seconds until edited
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/composables/__tests__/use-utils.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/__tests__/use-utils.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mpreserves exact imported 61 seconds until edited
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mpreserves exact imported 3661 seconds until edited
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mpreserves exact imported 1048708914 seconds until edited
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mpreserves exact imported 2094174799 seconds until edited
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mpreserves exact imported 2147483647 seconds until edited
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mdisplays 3661 with units
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mdisplays 90 with units
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mdisplays 60 with units
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mdisplays 30 with units
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts[2m > [22m[2minstruction duration in minutes with seconds storage[2m > [22m[2mdisplays null with units
+[22m[39m[Vue warn]: Component "i18n-t" has already been registered in target app.
+[Vue warn]: Component "I18nT" has already been registered in target app.
+[Vue warn]: Component "i18n-n" has already been registered in target app.
+[Vue warn]: Component "I18nN" has already been registered in target app.
+[Vue warn]: Component "i18n-d" has already been registered in target app.
+[Vue warn]: Component "I18nD" has already been registered in target app.
+[Vue warn]: Directive "t" has already been registered in target app.
+
+[90mstderr[2m | app/composables/__tests__/use-toast.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/__tests__/use-group-mealplan.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m app/composables/__tests__/use-toast.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m app/components/Domain/Recipe/RecipePage/RecipePageParts/CookTime.test.ts [2m([22m[2m15 tests[22m[2m)[22m[33m 463[2mms[22m[39m
+[90mstderr[2m | app/lib/validators/redirect.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/validators/redirect.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstderr[2m | app/lib/validators/password.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/validators/password.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+[90mstderr[2m | app/composables/__tests__/use-passwords.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/__tests__/use-passwords.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | app/lib/api/base/routes.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/lib/api/base/routes.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+[90mstderr[2m | app/composables/recipes/__tests__/use-recipe-nutrition.test.ts
+[22m[39m[intlify] Legacy API mode has been deprecated in v11. Use Composition API mode instead.
+About how to use the Composition API mode, see https://vue-i18n.intlify.dev/guide/advanced/composition.html
+
+ [32m✓[39m app/composables/recipes/__tests__/use-recipe-nutrition.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m app/pages/group/reports/report.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 67[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 6 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m app/composables/recipes/__tests__/use-unit-system.test.ts[2m > [22museUnitSystem[2m > [22mshows recipes as written until the reader opts in
+[41m[1m FAIL [22m[49m app/composables/recipes/__tests__/use-unit-system.test.ts[2m > [22museUnitSystem[2m > [22mnothing is inferred from the locale
+[41m[1m FAIL [22m[49m app/composables/recipes/__tests__/use-unit-system.test.ts[2m > [22museUnitSystem[2m > [22mmetric can be chosen
+[41m[1m FAIL [22m[49m app/composables/recipes/__tests__/use-unit-system.test.ts[2m > [22museUnitSystem[2m > [22mus can be chosen
+[41m[1m FAIL [22m[49m app/composables/recipes/__tests__/use-unit-system.test.ts[2m > [22museUnitSystem[2m > [22mthe choice survives a reload
+[41m[1m FAIL [22m[49m app/composables/recipes/__tests__/use-unit-system.test.ts[2m > [22museUnitSystem[2m > [22mshowAsWritten goes back to the authored units
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'clear')[39m
+[36m [2m❯[22m app/composables/recipes/__tests__/use-unit-system.test.ts:[2m6:18[22m[39m
+    [90m  4|[39m [34mdescribe[39m([32m"useUnitSystem"[39m[33m,[39m () [33m=>[39m {
+    [90m  5|[39m   [34mbeforeEach[39m(() [33m=>[39m {
+    [90m  6|[39m     localStorage[33m.[39m[34mclear[39m()[33m;[39m
+    [90m   |[39m                  [31m^[39m
+    [90m  7|[39m   })[33m;[39m
+    [90m  8|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m56 passed[39m[22m[90m (57)[39m
+[2m      Tests [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m628 passed[39m[22m[90m (634)[39m
+[2m   Start at [22m 23:27:16
+[2m   Duration [22m 7.02s[2m (transform 8.56s, setup 4.35s, import 12.80s, tests 2.41s, environment 28.93s)[22m
+
+exit=1
