@@ -5,6 +5,7 @@
  * returned verbatim rather than interpreted.
  */
 export function truncateText(text: string, length = 20, clamp = "..."): string {
-  const chars = [...text];
+  const segmenter = new Intl.Segmenter(undefined, { granularity: "grapheme" });
+  const chars = Array.from(segmenter.segment(text), (s) => s.segment);
   return chars.length > length ? chars.slice(0, length).join("") + clamp : text;
 }
