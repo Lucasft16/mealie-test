@@ -124,7 +124,10 @@
         "test-message-body": "Aquesta és una notificació de prova de Mealie.",
         "mealplan-entry-created": "S'ha creat una entrada del menú per al {date} ({entry_type})",
         "mealplan-entry-updated": "S'ha actualitzat una entrada del menú del {date} ({entry_type})",
-        "mealplan-entry-deleted": "S'ha suprimit una entrada del menú del {date} ({entry_type})"
+        "mealplan-entry-deleted": "S'ha suprimit una entrada del menú del {date} ({entry_type})",
+        "mealplan-range-entry-created": "S'ha creat una entrada del menú del {date} al {end_date} ({entry_type})",
+        "mealplan-range-entry-updated": "S'ha actualitzat una entrada del menú del {date} al {end_date} ({entry_type})",
+        "mealplan-range-entry-deleted": "S'ha suprimit una entrada del menú del {date} al {end_date} ({entry_type})"
     },
     "datetime": {
         "year": "any|anys",
