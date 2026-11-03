@@ -32,4 +32,11 @@ describe("truncateText", () => {
     expect(createElement).not.toHaveBeenCalled();
     createElement.mockRestore();
   });
+
+  // C09: nao cortar emojis simples ao meio
+  test("does not split simple emojis in half when truncating", () => {
+    expect(truncateText("Bolo 🍰", 6)).toEqual("Bolo 🍰");
+    expect(truncateText("Bolo 🍰!", 6)).toEqual("Bolo 🍰...");
+    expect(truncateText("🍕🍔🍟", 2)).toEqual("🍕🍔...");
+  });
 });
